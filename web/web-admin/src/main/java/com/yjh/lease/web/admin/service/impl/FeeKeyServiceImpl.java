@@ -3,14 +3,12 @@ package com.yjh.lease.web.admin.service.impl;
 import com.yjh.lease.model.entity.FeeKey;
 import com.yjh.lease.web.admin.mapper.FeeKeyMapper;
 import com.yjh.lease.web.admin.service.FeeKeyService;
-import com.yjh.lease.model.entity.FeeKey;
-import com.yjh.lease.web.admin.mapper.FeeKeyMapper;
-import com.yjh.lease.web.admin.service.FeeKeyService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yjh.lease.model.entity.FeeKey;
-import com.yjh.lease.web.admin.mapper.FeeKeyMapper;
-import com.yjh.lease.web.admin.service.FeeKeyService;
+import com.yjh.lease.web.admin.vo.fee.FeeKeyVo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
 * @author liubo
@@ -21,6 +19,13 @@ import org.springframework.stereotype.Service;
 public class FeeKeyServiceImpl extends ServiceImpl<FeeKeyMapper, FeeKey>
     implements FeeKeyService {
 
+    @Autowired
+    private FeeKeyMapper feeKeyMapper;
+
+    @Override
+    public List<FeeKeyVo> listFeeInfo() {
+        return feeKeyMapper.listFeeInfo();
+    }
 }
 
 

@@ -6,11 +6,11 @@
 
     <resultMap id="AttrKeyVoMap" type="com.yjh.lease.web.admin.vo.attr.AttrKeyVo">
         <id property="id" column="id"/>
-        <result property="name" column="key_name"/>
+        <result property="name" column="name"/>
         <collection property="attrValueList" ofType="com.yjh.lease.model.entity.AttrValue">
-            <id column="value_id" property="id"/>
-            <result column="value_name" property="name"/>
-            <result column="key_id" property="attrKeyId"/>
+            <id column="attr_value_id" property="id"/>
+            <result column="attr_value_name" property="name"/>
+            <result column="attr_key_id" property="attrKeyId"/>
         </collection>
     </resultMap>
 

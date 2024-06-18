@@ -1,12 +1,17 @@
 package com.yjh.lease.web.admin.controller.apartment;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.yjh.lease.common.result.Result;
 import com.yjh.lease.model.entity.CityInfo;
 import com.yjh.lease.model.entity.DistrictInfo;
 import com.yjh.lease.model.entity.ProvinceInfo;
+import com.yjh.lease.web.admin.service.CityInfoService;
+import com.yjh.lease.web.admin.service.DistrictInfoService;
+import com.yjh.lease.web.admin.service.ProvinceInfoService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,22 +24,38 @@ import java.util.List;
 @RequestMapping("/admin/region")
 public class RegionInfoController {
 
+    @Autowired
+    private ProvinceInfoService provinceInfoService;
+
+    @Autowired
+    private CityInfoService cityInfoService;
+
+    @Autowired
+    private DistrictInfoService districtInfoService;
+
     @Operation(summary = "查询省份信息列表")
     @GetMapping("province/list")
     public Result<List<ProvinceInfo>> listProvince() {
-        return Result.ok();
+        List<ProvinceInfo> provinceInfos = provinceInfoService.list();
+        return Result.ok(provinceInfos);
     }
 
     @Operation(summary = "根据省份id查询城市信息列表")
     @GetMapping("city/listByProvinceId")
     public Result<List<CityInfo>> listCityInfoByProvinceId(@RequestParam Long id) {
-        return Result.ok();
+        LambdaQueryWrapper<CityInfo> cityInfoLambdaQueryWrapper = new LambdaQueryWrapper<>();
+        cityInfoLambdaQueryWrapper.eq(CityInfo::getProvinceId, id);
+        List<CityInfo> cityInfos = cityInfoService.list(cityInfoLambdaQueryWrapper);
+        return Result.ok(cityInfos);
     }
 
     @GetMapping("district/listByCityId")
     @Operation(summary = "根据城市id查询区县信息")
     public Result<List<DistrictInfo>> listDistrictInfoByCityId(@RequestParam Long id) {
-        return Result.ok();
+        LambdaQueryWrapper<DistrictInfo> DistrictInfoLambdaQueryWrapper = new LambdaQueryWrapper<>();
+        DistrictInfoLambdaQueryWrapper.eq(DistrictInfo::getCityId, id);
+        List<DistrictInfo> list = districtInfoService.list(DistrictInfoLambdaQueryWrapper);
+        return Result.ok(list);
     }
 
 }

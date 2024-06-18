@@ -4,6 +4,8 @@ import com.yjh.lease.model.entity.FeeKey;
 import com.yjh.lease.web.admin.vo.fee.FeeKeyVo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 /**
 * @author liubo
 * @description 针对表【fee_key(杂项费用名称表)】的数据库操作Service
@@ -11,4 +13,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface FeeKeyService extends IService<FeeKey> {
 
+    List<FeeKeyVo> listFeeInfo();
 }

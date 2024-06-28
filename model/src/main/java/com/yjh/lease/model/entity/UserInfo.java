@@ -1,12 +1,9 @@
 package com.yjh.lease.model.entity;
 
-import com.yjh.lease.model.enums.BaseStatus;
-import com.yjh.lease.model.enums.BaseStatus;
-import com.yjh.lease.model.enums.BaseStatus;
-import io.swagger.v3.oas.annotations.media.Schema;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
-
+import com.yjh.lease.model.enums.BaseStatus;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 @Schema(description = "用户信息表")
@@ -21,7 +18,7 @@ public class UserInfo extends BaseEntity {
     private String phone;
 
     @Schema(description = "密码")
-    @TableField(value = "password")
+    @TableField(value = "password",select = false)
     private String password;
 
     @Schema(description = "头像url")

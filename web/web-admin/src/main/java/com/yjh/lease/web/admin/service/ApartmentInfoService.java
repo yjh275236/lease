@@ -1,11 +1,13 @@
 package com.yjh.lease.web.admin.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.yjh.lease.model.entity.ApartmentInfo;
 import com.yjh.lease.web.admin.vo.apartment.ApartmentDetailVo;
 import com.yjh.lease.web.admin.vo.apartment.ApartmentItemVo;
 import com.yjh.lease.web.admin.vo.apartment.ApartmentQueryVo;
 import com.yjh.lease.web.admin.vo.apartment.ApartmentSubmitVo;
-import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
 * @author liubo
@@ -14,4 +16,12 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface ApartmentInfoService extends IService<ApartmentInfo> {
 
+    void saveOrUpdateApartment(ApartmentSubmitVo apartmentSubmitVo);
+
+
+    IPage<ApartmentItemVo> pageItem(Page<ApartmentItemVo> apartmentItemVoPage, ApartmentQueryVo queryVo);
+
+    ApartmentDetailVo getDetailById(Long id);
+
+    void removeApartmentById(Long id);
 }

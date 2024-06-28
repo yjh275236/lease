@@ -1,5 +1,6 @@
 package com.yjh.lease.web.admin.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.yjh.lease.model.entity.SystemUser;
 import com.yjh.lease.web.admin.vo.system.user.SystemUserItemVo;
 import com.yjh.lease.web.admin.vo.system.user.SystemUserQueryVo;
@@ -12,4 +13,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface SystemUserService extends IService<SystemUser> {
 
+    IPage<SystemUserItemVo> pageSystemUserByQuery(IPage<SystemUser> page, SystemUserQueryVo queryVo);
+
+    SystemUserItemVo getSystemUserById(Long id);
 }

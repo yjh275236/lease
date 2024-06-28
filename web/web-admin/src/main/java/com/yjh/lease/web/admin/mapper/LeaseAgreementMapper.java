@@ -1,5 +1,6 @@
 package com.yjh.lease.web.admin.mapper;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.yjh.lease.model.entity.LeaseAgreement;
 import com.yjh.lease.web.admin.vo.agreement.AgreementQueryVo;
 import com.yjh.lease.web.admin.vo.agreement.AgreementVo;
@@ -13,6 +14,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 */
 public interface LeaseAgreementMapper extends BaseMapper<LeaseAgreement> {
 
+    IPage<AgreementVo> pageAgreementByQuery(IPage<AgreementVo> page, AgreementQueryVo queryVo);
 }
 
 

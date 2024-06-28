@@ -1,13 +1,16 @@
 package com.yjh.lease.web.admin.service.impl;
 
-import com.yjh.lease.web.admin.mapper.SystemUserMapper;
-import com.yjh.lease.web.admin.service.SystemUserService;
-import com.yjh.lease.model.entity.SystemUser;
-import com.yjh.lease.web.admin.mapper.SystemUserMapper;
-import com.yjh.lease.web.admin.service.SystemUserService;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.yjh.lease.model.entity.SystemPost;
+import com.yjh.lease.model.entity.SystemUser;
+import com.yjh.lease.web.admin.mapper.SystemPostMapper;
 import com.yjh.lease.web.admin.mapper.SystemUserMapper;
 import com.yjh.lease.web.admin.service.SystemUserService;
+import com.yjh.lease.web.admin.vo.system.user.SystemUserItemVo;
+import com.yjh.lease.web.admin.vo.system.user.SystemUserQueryVo;
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -19,6 +22,29 @@ import org.springframework.stereotype.Service;
 public class SystemUserServiceImpl extends ServiceImpl<SystemUserMapper, SystemUser>
         implements SystemUserService {
 
+    @Autowired
+    private SystemUserMapper systemUserMapper;
+
+    @Autowired
+    private SystemPostMapper systemPostMapper;
+
+    @Override
+    public SystemUserItemVo getSystemUserById(Long id) {
+        SystemUser systemUser = systemUserMapper.selectById(id);
+
+        SystemPost systemPost = systemPostMapper.selectById(systemUser.getPostId());
+
+        SystemUserItemVo systemUserItemVo = new SystemUserItemVo();
+        BeanUtils.copyProperties(systemPost, systemUserItemVo);
+        systemUserItemVo.setPostName(systemUserItemVo.getPostName());
+
+        return systemUserItemVo;
+    }
+
+    @Override
+    public IPage<SystemUserItemVo> pageSystemUserByQuery(IPage<SystemUser> page, SystemUserQueryVo queryVo) {
+        return systemUserMapper.pageSystemUserByQuery(page, queryVo);
+    }
 }
 
 

@@ -1,6 +1,7 @@
 package com.yjh.lease.web.admin.controller.login;
 
 
+import com.yjh.lease.common.login.LoginUserHolder;
 import com.yjh.lease.common.result.Result;
 import com.yjh.lease.web.admin.service.LoginService;
 import com.yjh.lease.web.admin.vo.login.CaptchaVo;
@@ -32,9 +33,18 @@ public class LoginController {
         String token = service.login(loginVo);
         return Result.ok(token);
     }
-    @Operation(summary = "获取登陆用户个人信息")
-    @GetMapping("info")
-    public Result<SystemUserInfoVo> info() {
-        return Result.ok();
+//    @Operation(summary = "获取登陆用户个人信息")
+//    @GetMapping("info")
+//    public Result<SystemUserInfoVo> info(@RequestHeader("access-token") String token) {
+//        Claims claims = JwtUtil.parseToken(token);
+//        Long userId = claims.get("userId", Long.class);
+//        SystemUserInfoVo userInfo = service.getLoginUserInfo(userId);
+//        return Result.ok(userInfo);
+//    }
+@Operation(summary = "获取登陆用户个人信息")
+@GetMapping("info")
+public Result<SystemUserInfoVo> info() {
+    SystemUserInfoVo userInfo = service.getLoginUserInfo(LoginUserHolder.getLoginUser().getUserId());
+    return Result.ok(userInfo);
     }
 }

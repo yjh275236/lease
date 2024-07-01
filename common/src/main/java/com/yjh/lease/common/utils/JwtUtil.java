@@ -19,10 +19,16 @@ public class JwtUtil {
                 setExpiration(new Date(System.currentTimeMillis() + tokenExpiration)).
                 claim("userId", userId).
                 claim("username", username).
-                signWith(tokenSignKey).
+                signWith(tokenSignKey,SignatureAlgorithm.HS256).
                 compact();
         return token;
     }
+
+    public static void main(String[] args) {
+        System.out.println(createToken(2L, "user"));
+    }
+
+
     public static Claims parseToken(String token){
 
         // 判断token是否为空
@@ -33,9 +39,10 @@ public class JwtUtil {
 
         try{
             // 创建JwtParser对象，设置签名密钥为secretKey
-            JwtParser jwtParser = Jwts.parserBuilder().setSigningKey(secretKey).build();
+            JwtParser jwtParser = Jwts.parserBuilder().setSigningKey(tokenSignKey).build();
             // 解析token，并返回解析后的Claims对象
-            return jwtParser.parseClaimsJws(token).getBody();
+            Jws<Claims> claimsJws = jwtParser.parseClaimsJws(token);
+            return claimsJws.getBody();
         }catch (ExpiredJwtException e){
             // 如果token已过期，则抛出LeaseException异常，错误码为TOKEN_EXPIRED
             throw new LeaseException(ResultCodeEnum.TOKEN_EXPIRED);

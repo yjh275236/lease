@@ -12,6 +12,7 @@ import com.yjh.lease.web.admin.mapper.SystemUserMapper;
 import com.yjh.lease.web.admin.service.LoginService;
 import com.yjh.lease.web.admin.vo.login.CaptchaVo;
 import com.yjh.lease.web.admin.vo.login.LoginVo;
+import com.yjh.lease.web.admin.vo.system.user.SystemUserInfoVo;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -86,4 +87,12 @@ public class LoginServiceImpl implements LoginService {
         return new CaptchaVo(image, key);
     }
 
+    @Override
+    public SystemUserInfoVo getLoginUserInfo(Long userId) {
+        SystemUser systemUser = systemUserMapper.selectById(userId);
+        SystemUserInfoVo systemUserInfoVo = new SystemUserInfoVo();
+        systemUserInfoVo.setName(systemUser.getName());
+        systemUserInfoVo.setAvatarUrl(systemUser.getAvatarUrl());
+        return systemUserInfoVo;
+    }
 }

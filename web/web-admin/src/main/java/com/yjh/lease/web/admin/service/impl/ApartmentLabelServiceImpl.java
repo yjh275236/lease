@@ -4,10 +4,6 @@ import com.yjh.lease.web.admin.mapper.ApartmentLabelMapper;
 import com.yjh.lease.web.admin.service.ApartmentLabelService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yjh.lease.model.entity.ApartmentLabel;
-import com.yjh.lease.web.admin.service.ApartmentLabelService;
-import com.yjh.lease.web.admin.mapper.ApartmentLabelMapper;
-import com.yjh.lease.web.admin.mapper.ApartmentLabelMapper;
-import com.yjh.lease.web.admin.service.ApartmentLabelService;
 import org.springframework.stereotype.Service;
 
 /**

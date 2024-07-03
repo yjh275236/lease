@@ -4,12 +4,6 @@ import com.yjh.lease.model.entity.GraphInfo;
 import com.yjh.lease.web.admin.mapper.GraphInfoMapper;
 import com.yjh.lease.web.admin.service.GraphInfoService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yjh.lease.model.entity.GraphInfo;
-import com.yjh.lease.web.admin.service.GraphInfoService;
-import com.yjh.lease.web.admin.mapper.GraphInfoMapper;
-import com.yjh.lease.model.entity.GraphInfo;
-import com.yjh.lease.web.admin.mapper.GraphInfoMapper;
-import com.yjh.lease.web.admin.service.GraphInfoService;
 import org.springframework.stereotype.Service;
 
 /**

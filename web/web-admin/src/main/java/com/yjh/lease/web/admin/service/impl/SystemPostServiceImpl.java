@@ -4,12 +4,6 @@ import com.yjh.lease.model.entity.SystemPost;
 import com.yjh.lease.web.admin.mapper.SystemPostMapper;
 import com.yjh.lease.web.admin.service.SystemPostService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yjh.lease.model.entity.SystemPost;
-import com.yjh.lease.web.admin.service.SystemPostService;
-import com.yjh.lease.web.admin.mapper.SystemPostMapper;
-import com.yjh.lease.model.entity.SystemPost;
-import com.yjh.lease.web.admin.mapper.SystemPostMapper;
-import com.yjh.lease.web.admin.service.SystemPostService;
 import org.springframework.stereotype.Service;
 
 /**

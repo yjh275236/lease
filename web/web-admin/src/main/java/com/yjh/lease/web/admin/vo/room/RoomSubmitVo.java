@@ -2,7 +2,6 @@ package com.yjh.lease.web.admin.vo.room;
 
 import com.yjh.lease.model.entity.RoomInfo;
 import com.yjh.lease.web.admin.vo.graph.GraphVo;
-import com.yjh.lease.web.admin.vo.graph.GraphVo;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 

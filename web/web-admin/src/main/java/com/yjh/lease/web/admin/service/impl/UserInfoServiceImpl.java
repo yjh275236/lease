@@ -4,10 +4,6 @@ import com.yjh.lease.web.admin.mapper.UserInfoMapper;
 import com.yjh.lease.web.admin.service.UserInfoService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yjh.lease.model.entity.UserInfo;
-import com.yjh.lease.web.admin.service.UserInfoService;
-import com.yjh.lease.web.admin.mapper.UserInfoMapper;
-import com.yjh.lease.web.admin.mapper.UserInfoMapper;
-import com.yjh.lease.web.admin.service.UserInfoService;
 import org.springframework.stereotype.Service;
 
 /**

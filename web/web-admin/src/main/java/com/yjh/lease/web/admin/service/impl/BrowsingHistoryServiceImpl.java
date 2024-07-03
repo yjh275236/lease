@@ -4,10 +4,6 @@ import com.yjh.lease.web.admin.mapper.BrowsingHistoryMapper;
 import com.yjh.lease.web.admin.service.BrowsingHistoryService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yjh.lease.model.entity.BrowsingHistory;
-import com.yjh.lease.web.admin.service.BrowsingHistoryService;
-import com.yjh.lease.web.admin.mapper.BrowsingHistoryMapper;
-import com.yjh.lease.web.admin.mapper.BrowsingHistoryMapper;
-import com.yjh.lease.web.admin.service.BrowsingHistoryService;
 import org.springframework.stereotype.Service;
 
 /**

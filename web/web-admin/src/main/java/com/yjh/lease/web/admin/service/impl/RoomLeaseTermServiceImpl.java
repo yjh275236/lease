@@ -4,10 +4,6 @@ import com.yjh.lease.web.admin.mapper.RoomLeaseTermMapper;
 import com.yjh.lease.web.admin.service.RoomLeaseTermService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yjh.lease.model.entity.RoomLeaseTerm;
-import com.yjh.lease.web.admin.service.RoomLeaseTermService;
-import com.yjh.lease.web.admin.mapper.RoomLeaseTermMapper;
-import com.yjh.lease.web.admin.mapper.RoomLeaseTermMapper;
-import com.yjh.lease.web.admin.service.RoomLeaseTermService;
 import org.springframework.stereotype.Service;
 
 /**

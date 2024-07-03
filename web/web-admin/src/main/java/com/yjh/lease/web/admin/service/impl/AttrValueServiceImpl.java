@@ -4,10 +4,6 @@ import com.yjh.lease.web.admin.mapper.AttrValueMapper;
 import com.yjh.lease.web.admin.service.AttrValueService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yjh.lease.model.entity.AttrValue;
-import com.yjh.lease.web.admin.service.AttrValueService;
-import com.yjh.lease.web.admin.mapper.AttrValueMapper;
-import com.yjh.lease.web.admin.mapper.AttrValueMapper;
-import com.yjh.lease.web.admin.service.AttrValueService;
 import org.springframework.stereotype.Service;
 
 /**

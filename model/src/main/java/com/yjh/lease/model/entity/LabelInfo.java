@@ -1,8 +1,6 @@
 package com.yjh.lease.model.entity;
 
 import com.yjh.lease.model.enums.ItemType;
-import com.yjh.lease.model.enums.ItemType;
-import com.yjh.lease.model.enums.ItemType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;

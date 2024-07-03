@@ -4,12 +4,6 @@ import com.yjh.lease.model.entity.ProvinceInfo;
 import com.yjh.lease.web.admin.mapper.ProvinceInfoMapper;
 import com.yjh.lease.web.admin.service.ProvinceInfoService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yjh.lease.model.entity.ProvinceInfo;
-import com.yjh.lease.web.admin.service.ProvinceInfoService;
-import com.yjh.lease.web.admin.mapper.ProvinceInfoMapper;
-import com.yjh.lease.model.entity.ProvinceInfo;
-import com.yjh.lease.web.admin.mapper.ProvinceInfoMapper;
-import com.yjh.lease.web.admin.service.ProvinceInfoService;
 import org.springframework.stereotype.Service;
 
 /**

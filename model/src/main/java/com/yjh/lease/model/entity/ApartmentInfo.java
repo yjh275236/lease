@@ -1,10 +1,8 @@
 package com.yjh.lease.model.entity;
 
 import com.yjh.lease.model.enums.ReleaseStatus;
-import com.yjh.lease.model.enums.ReleaseStatus;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.yjh.lease.model.enums.ReleaseStatus;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 

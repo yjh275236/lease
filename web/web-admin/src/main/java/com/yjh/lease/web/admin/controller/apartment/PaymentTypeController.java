@@ -1,7 +1,6 @@
 package com.yjh.lease.web.admin.controller.apartment;
 
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.yjh.lease.common.result.Result;
 import com.yjh.lease.model.entity.PaymentType;
 import com.yjh.lease.web.admin.service.PaymentTypeService;

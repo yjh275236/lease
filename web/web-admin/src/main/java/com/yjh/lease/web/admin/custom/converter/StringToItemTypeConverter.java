@@ -1,6 +1,6 @@
 //package com.yjh.lease.web.admin.custom.converter;
 //
-//import com.yjh.lease.model.enums.ItemType;
+//import enums.com.atguigu.lease.model.ItemType;
 //import org.springframework.core.convert.converter.Converter;
 //import org.springframework.stereotype.Component;
 //

@@ -4,10 +4,6 @@ import com.yjh.lease.web.admin.mapper.DistrictInfoMapper;
 import com.yjh.lease.web.admin.service.DistrictInfoService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yjh.lease.model.entity.DistrictInfo;
-import com.yjh.lease.web.admin.service.DistrictInfoService;
-import com.yjh.lease.web.admin.mapper.DistrictInfoMapper;
-import com.yjh.lease.web.admin.mapper.DistrictInfoMapper;
-import com.yjh.lease.web.admin.service.DistrictInfoService;
 import org.springframework.stereotype.Service;
 
 /**

@@ -4,12 +4,6 @@ import com.yjh.lease.model.entity.ApartmentFacility;
 import com.yjh.lease.web.admin.mapper.ApartmentFacilityMapper;
 import com.yjh.lease.web.admin.service.ApartmentFacilityService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yjh.lease.model.entity.ApartmentFacility;
-import com.yjh.lease.web.admin.service.ApartmentFacilityService;
-import com.yjh.lease.web.admin.mapper.ApartmentFacilityMapper;
-import com.yjh.lease.model.entity.ApartmentFacility;
-import com.yjh.lease.web.admin.mapper.ApartmentFacilityMapper;
-import com.yjh.lease.web.admin.service.ApartmentFacilityService;
 import org.springframework.stereotype.Service;
 
 /**

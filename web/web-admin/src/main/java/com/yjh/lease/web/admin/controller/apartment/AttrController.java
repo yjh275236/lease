@@ -8,7 +8,6 @@ import com.yjh.lease.model.entity.AttrValue;
 import com.yjh.lease.web.admin.service.AttrKeyService;
 import com.yjh.lease.web.admin.service.AttrValueService;
 import com.yjh.lease.web.admin.vo.attr.AttrKeyVo;
-import com.yjh.lease.web.admin.vo.attr.AttrKeyVo;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;

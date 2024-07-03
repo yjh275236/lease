@@ -4,10 +4,6 @@ import com.yjh.lease.web.admin.mapper.PaymentTypeMapper;
 import com.yjh.lease.web.admin.service.PaymentTypeService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yjh.lease.model.entity.PaymentType;
-import com.yjh.lease.web.admin.service.PaymentTypeService;
-import com.yjh.lease.web.admin.mapper.PaymentTypeMapper;
-import com.yjh.lease.web.admin.mapper.PaymentTypeMapper;
-import com.yjh.lease.web.admin.service.PaymentTypeService;
 import org.springframework.stereotype.Service;
 
 /**

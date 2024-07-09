@@ -31,3 +31,5 @@ mybatis-plus:
 springdoc:
   default-flat-param-object: true
 
+aliyun:
+  sms:

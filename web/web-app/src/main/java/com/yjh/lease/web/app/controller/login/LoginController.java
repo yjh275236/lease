@@ -1,6 +1,7 @@
 package com.yjh.lease.web.app.controller.login;
 
 
+import com.yjh.lease.common.login.LoginUserHolder;
 import com.yjh.lease.common.result.Result;
 import com.yjh.lease.web.app.service.LoginService;
 import com.yjh.lease.web.app.vo.user.LoginVo;
@@ -34,7 +35,8 @@ public class LoginController {
     @GetMapping("info")
     @Operation(summary = "获取登录用户信息")
     public Result<UserInfoVo> info() {
-        return Result.ok();
+        UserInfoVo info = service.getUserInfoId(LoginUserHolder.getLoginUser().getUserId());
+        return Result.ok(info);
     }
 }
 

@@ -1,7 +1,13 @@
 package com.yjh.lease.web.app.mapper;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.yjh.lease.model.entity.RoomInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.yjh.lease.web.app.vo.room.RoomItemVo;
+import com.yjh.lease.web.app.vo.room.RoomQueryVo;
+
+import java.math.BigDecimal;
 
 /**
 * @author liubo
@@ -11,4 +17,9 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 */
 public interface RoomInfoMapper extends BaseMapper<RoomInfo> {
 
+    IPage<RoomItemVo> pageRoomItemByQuery(Page<RoomItemVo> page, RoomQueryVo queryVo);
+
+    BigDecimal selectMinRentByApartmentId(Long id);
+
+    IPage<RoomItemVo> pageItemByApartmentId(IPage<RoomItemVo> page, Long id);
 }

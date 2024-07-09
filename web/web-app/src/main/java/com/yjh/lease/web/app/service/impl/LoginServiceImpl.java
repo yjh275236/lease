@@ -12,6 +12,7 @@ import com.yjh.lease.web.app.service.LoginService;
 import com.yjh.lease.web.app.service.SmsService;
 import com.yjh.lease.web.app.service.UserInfoService;
 import com.yjh.lease.web.app.vo.user.LoginVo;
+import com.yjh.lease.web.app.vo.user.UserInfoVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
@@ -98,5 +99,11 @@ public class LoginServiceImpl implements LoginService {
 
         //5.创建并返回TOKEN
         return JwtUtil.createToken(userInfo.getId(), loginVo.getPhone());
+    }
+
+    @Override
+    public UserInfoVo getUserInfoId(Long id) {
+        UserInfo userInfo = userInfoService.getById(id);
+        return new UserInfoVo(userInfo.getNickname(), userInfo.getAvatarUrl());
     }
 }
